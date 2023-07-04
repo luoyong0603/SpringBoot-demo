@@ -31,7 +31,7 @@ spring:
 #    host: smtp.qq.com  # 配置 smtp 服务器地址
 #    port: 25   #smtp 服务器的端口
 #    username: luoyong0603@foxmail.com  #配置邮箱用户名;你自己的邮箱
-#    password: xcpvcvequoanbega  #配置申请到的授权码;这里填写刚才短信申请到的授权码
+#    password: xxxcpvcvequoanbega  #配置申请到的授权码;这里填写刚才短信申请到的授权码
 #    default-encoding: UTF-8   #配置邮件编码
 #    protocol: smtp #协议
 

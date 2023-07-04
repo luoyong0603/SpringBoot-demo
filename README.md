@@ -153,7 +153,7 @@ SpringCloud Data Flow：Connect everything，连接任何东西。
 若想学习更多，这边请👉👉👉[《滚雪球学Spring Boot》](https://blog.csdn.net/weixin_43970743/category_11599389.html)👈👈👈
 
 ### 7.2 Spring Boot【进阶篇】
-Spring Boot进阶(01)：Spring Boot 集成 Redis，实现缓存自由
+[Spring Boot进阶(01)：Spring Boot 集成 Redis，实现缓存自由](https://blog.csdn.net/weixin_43970743/article/details/125895363)
 
 Spring Boot进阶(02)：使用Validation进行参数校验
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.vo.UserInfoVo">
+        <result column="name" property="name" />
+        <result column="className" property="className" />
+    </resultMap>
+
+    <!--根据userId查询-->
+    <select id="getUserById" resultType="com.example.demo.entity.UserEntity">
+        select * from user where id = #{userId}
+    </select>
+
+    <!--根据性别和班级名称查询-->
+    <select id="getUsers"  resultMap="BaseResultMap">
+        select u.name as name,g.name as className from user u left join grade g on u.id = g.student_id  where u.sex = #{model.sex} and g.name = #{model.className}
+    </select>
+
+    <!--根据用户ids遍历查询-->
+    <select id="getUsersByIds"  resultMap="BaseResultMap">
+         select u.name as name , g.name as className from user u left join grade g on u.id = g.student_id
+         where 1=1
+        <if test="userIds.size() !=0">
+            and u.id in
+            <foreach collection="userIds" item="userId" open="(" separator="," close=")" >
+                #{userId}
+            </foreach>
+        </if>
+    </select>
+
+    <!--查询id不等于2的用户-->
+    <select id="getUserList"  resultType="com.example.demo.entity.UserEntity">
+        select * from user where id  <![CDATA[ <> ]]> 2
+    </select>
+
+    <!--根据sex返回指定结构体-->
+    <resultMap type="com.example.demo.entity.UserEntity" id="getUserForSex">
+        <discriminator javaType="java.lang.String" column="sex">
+            <case value="男" resultType="com.example.demo.vo.user.boy"/>
+            <case value="女" resultType="com.example.demo.vo.user.girl"/>
+        </discriminator>
+    </resultMap>
+
+    <select id="getUserByIdFor" resultMap="getUserForSex">
+        select * from user where id= #{id}
+    </select>
+
+
+
+
+</mapper>

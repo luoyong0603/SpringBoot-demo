@@ -1,0 +1,16 @@
+
+spring:
+  profiles:
+    # 控制使用哪套环境变量
+    active: test
+
+
+server:
+  port: 8080
+
+#指定log4j2.xml日志配置文件
+#logging:
+#  config: ${user.dir}/config/log4j2.xml
+
+a: ${user.dir} #获取项目根目录
+b: ${user.home}

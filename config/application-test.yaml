@@ -1,0 +1,177 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+          url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+          username: root
+          password: 123456
+        slave_1:
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+          url: jdbc:mysql://127.0.0.1:3306/test_db2?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+          username: root
+          password: 123456
+
+  flyway:
+    enabled: true # 开启 Flyway 功能
+    cleanDisabled: true # 禁用 Flyway 所有的 drop 相关的逻辑，避免出现跑路的情况。
+    locations: # 迁移脚本目录
+      classpath: db/migration # 配置 SQL-based 的 SQL 脚本在该目录下
+#      - classpath:cn.iocoder.springboot.lab20.databaseversioncontrol.migration # 配置 Java-based 的 Java 文件在该目录下
+    check-location: false # 是否校验迁移脚本目录下。如果配置为 true ，代表需要校验。此时，如果目录下没有迁移脚本，会抛出 IllegalStateException 异常
+    url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8 # 数据库地址
+    user: root # 数据库账号
+    password: 123456 # 数据库密码
+
+
+#  mail:
+#    host: smtp.qq.com  # 配置 smtp 服务器地址
+#    port: 25   #smtp 服务器的端口
+#    username: luoyong0603@foxmail.com  #配置邮箱用户名;你自己的邮箱
+#    password: xcpvcvequoanbega  #配置申请到的授权码;这里填写刚才短信申请到的授权码
+#    default-encoding: UTF-8   #配置邮件编码
+#    protocol: smtp #协议
+
+#  #热部署
+#  devtools:
+#    restart:
+#      enabled: true  #设置开启热部署，false即不开启热部署
+#      additional-paths: src/main/java #指定热部署的目录
+#      exclude: test/**  #指定目录不更新
+
+  #aop开关
+  aop:
+    auto: true #自动代理开启；false：关闭
+    proxy-target-class: false #属性值决定是基于接口的还是基于类的代理被创建.true表示基于类的代理将使用,false表示默认使用Jdk基于接口的代理
+
+  #配置rabbitMq 服务器
+  rabbitmq:
+    #设置RabbitMQ的IP地址
+    host: 127.0.0.1
+    #设置rabbitmq服务器连接端口
+    port: 5672
+    #设置rabbitmq服务器用户名  本地搭建对应的账户密码都是 guest
+    username: guest
+    #设置rabbitmq服务器密码
+    password: guest
+    #设置rabbitmq服务器虚拟主机；可以不设置,使用server默认host
+#    virtual-host: JCcccHost
+
+#配置kafka 服务器
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      # 发生错误后，消息重发的次数。
+      retries: 0
+      #当有多个消息需要被发送到同一个分区时，生产者会把它们放在同一个批次里。该参数指定了一个批次可以使用的内存大小，按照字节数计算。
+      batch-size: 16384
+      # 设置生产者内存缓冲区的大小。
+      buffer-memory: 33554432
+      # 键的序列化方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # 值的序列化方式
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # acks=0 ： 生产者在成功写入消息之前不会等待任何来自服务器的响应。
+      # acks=1 ： 只要集群的首领节点收到消息，生产者就会收到一个来自服务器成功响应。
+      # acks=all ：只有当所有参与复制的节点全部收到消息时，生产者才会收到一个来自服务器的成功响应。
+      acks: 1
+    consumer:
+      # 自动提交的时间间隔 在spring boot 2.X 版本中这里采用的是值的类型为Duration 需要符合特定的格式，如1S,1M,2H,5D
+      auto-commit-interval: 1S
+      # 该属性指定了消费者在读取一个没有偏移量的分区或者偏移量无效的情况下该作何处理：
+      # latest（默认值）在偏移量无效的情况下，消费者将从最新的记录开始读取数据（在消费者启动之后生成的记录）
+      # earliest ：在偏移量无效的情况下，消费者将从起始位置读取分区的记录
+      auto-offset-reset: earliest
+      # 是否自动提交偏移量，默认值是true,为了避免出现重复数据和数据丢失，可以把它设置为false,然后手动提交偏移量
+      enable-auto-commit: false
+      # 键的反序列化方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 值的反序列化方式
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      # 在侦听器容器中运行的线程数。
+      concurrency: 5
+      #listner负责ack，每调用一次，就立即commit
+      ack-mode: manual_immediate
+      missing-topics-fatal: false
+
+
+  #redis配置
+  redis:
+    database: 0    #Redis数据库索引（默认为0）
+    host: 127.0.0.1  #redis服务器ip，由于我是搭建在本地，固指向本地ip
+    port: 6379  #redis服务器连接端口
+    password:    #redis服务器连接密码（默认为空）
+    # 连接池配置
+    jedis.pool:
+      max-active: 20      #连接池最大连接数（使用负值表示没有限制）
+      max-wait: -1     #连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 10        #连接池中的最大空闲连接
+      min-idle: 0         #连接池中的最小空闲连接
+      timeout: 1000      #连接超时时间（毫秒）。我设置的是1秒
+
+#ElasticSearch配置
+#  data:
+#    elasticsearch:
+#      cluster-name: elasticsearch
+#      cluster-nodes: localhost:9300
+#      repositories:
+#        enabled: true
+management:
+  health:
+    elasticsearch:
+      enabled: false   #关闭 actuator 对 elasticsearch 的健康检查
+
+  druid:
+    #配置druid和监控功能
+    stat-view-servlet:
+      enabled: true
+      login-username: llp
+      login-password: 123
+      reset-enable: false
+      #配置web监控
+    web-stat-filter:
+      enabled: true
+      #配置路径,如果没有设置默认为/*
+      url-pattern: /*
+      exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+    filter:
+      #配置sql监控
+      stat:
+        #1000毫秒及以上就是满慢sql
+        slow-sql-millis: 1000
+        #启用慢查询log日志
+        log-slow-sql: true
+        enabled: true
+        #配置sql防火墙
+      wall:
+        #启用
+        enabled: true
+        config:
+          #不允许删除表的sql操作
+          drop-table-allow: false
+          #不孕执行select *的sql执行
+          select-all-column-allow: false
+  thymeleaf:
+    cache: false
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+
+#management:
+#  health:
+#    elasticsearch:
+#      enabled: false
+luoyong:
+  redis:
+    login-time-out: 1800
+
+# 日志设置
+logging:
+  level:
+    # 持久层日志级别
+    com.example.demo.dao: debug
+

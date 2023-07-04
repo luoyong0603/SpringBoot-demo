@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<h6>Thymeleaf 模板引擎</h6>
+<table border="1" bgcolor="#f0ffff">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>地址</th>
+    </tr>
+    </thead>
+    <!--th:each表示循环遍历，和Vue一样-->
+    <tbody th:each="user : ${users}">
+    <tr>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.sex}"></td>
+        <td th:text="${user.address}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

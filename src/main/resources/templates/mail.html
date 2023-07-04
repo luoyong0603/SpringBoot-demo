@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--xmlns属性 定义一个命名空间-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf邮件模板</title>
+</head>
+<body>
+<p>这是一份学生名单：请查收</p>
+<table border="1">
+    <tr>
+        <td>学校</td>
+        <td th:text="${school}"></td>
+    </tr>
+    <tr>
+        <td>班级</td>
+        <td th:text="${className}"></td>
+    </tr>
+    <tr>
+        <td>姓名</td>
+        <td th:text="${name}"></td>
+    </tr>
+</table>
+<div style="color: red;">以上是学生名单！</div>
+</body>
+</html>

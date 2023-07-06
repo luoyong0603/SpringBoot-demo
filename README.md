@@ -1,8 +1,8 @@
-> 👨‍🎓作者：bug菌\
->
-> ✏️博客：CSDN、掘金、infoQ、51CTO等\
->
-> 🎉简介：CSDN|阿里云|华为云|51CTO等社区博客专家，历届博客之星Top30，掘金年度人气作者Top40，51CTO年度博主Top12，掘金 | InfoQ | 51CTO等社区优质创作者，全网粉丝合计**15w+** ；硬核微信公众号「猿圈奇妙屋」，欢迎你的加入！免费白嫖最新BAT互联网公司面试题、4000G pdf电子书籍、简历模板等海量资料。
+> 👨‍🎓作者：bug菌
+> 
+> ✏️博客：[CSDN](https://blog.csdn.net/weixin_43970743)、[掘金](https://juejin.cn/user/695333581765240)、[infoQ](https://www.infoq.cn/u/luoyong/publish)、[51CTO](https://blog.51cto.com/u_15700751)等
+> 
+> 🎉简介：CSDN|阿里云|华为云|51CTO等社区博客专家，历届博客之星Top30，掘金年度人气作者Top40，51CTO年度博主Top12，掘金 | InfoQ | 51CTO等社区优质创作者，全网粉丝合计**15w+** ；硬核微信公众号「[猿圈奇妙屋](https://mp.weixin.qq.com/s/ARtqFCFlbLxXguBSbhXnUA)」，欢迎你的加入！免费白嫖最新BAT互联网公司面试题、4000G pdf电子书籍、简历模板等海量资料。
 >
 
 
@@ -24,65 +24,69 @@
 ## 1. Spring Boot 是什么？
 ​        随着动态语言流行(Ruby,Scala,NodeJs等)，Java 开发变得相对笨重，配置繁琐，开发效率低下，部署流程复杂，以及第三方集成难度也相对较大，针对该环境，Spring Boot被开发出来，其使用“习惯大于配置目标”,借助Spring Boot 能够让项目快速运行起来，同时借助Spring Boot可以快速创建web 应用并独立进行部署(jar包 war 包方式，内嵌servlet 容器)，同时借助Spring Boot 在开发应用时可以不用或很少去进行相关xml环境配置，简化了开发，大大提高项目开发效率。
 
-Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，让Spring Boot在蓬勃发展的快速应用开发领域(rapid application development)成为领导者.
+        Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，让Spring Boot在蓬勃发展的快速应用开发领域(rapid application development)成为领导者.
 
 ## 2. 为什么要学习Spring Boot？
-针对这个疑问，我分别从以下三个层面进行分析概述，告诉大家为什么Spring Boot 为什么非学不可！
+        针对这个疑问，我分别从以下三个层面进行分析概述，告诉大家为什么Spring Boot 为什么非学不可！
 
 ### 2.1 从Spring官方来看
-我们打开 Spring 的官方网站，可以看到下图，你们能看到什么？
+        我们打开 Spring 的官方网站，可以看到下图，你们能看到什么？
+		![](https://img-blog.csdnimg.cn/20191011132725742.png)
 
+        表明官方对 Spring Boot 的定位是 ：Build Anything， Build任何东西。Spring Boot旨在尽可能快地启动和运行，并且只需最少的 Spring 前期配置。 
 
-表明官方对 Spring Boot 的定位是 ：Build Anything， Build任何东西。Spring Boot旨在尽可能快地启动和运行，并且只需最少的 Spring 前期配置。 同时我们也来看一下官方对后面两个的定位：
+        同时我们也来看一下官方对后面两个的定位：
 
-SpringCloud：Coordinate Anything，协调任何事情。
-SpringCloud Data Flow：Connect everything，连接任何东西。
-仔细品味一下，Spring 官网对 Spring Boot、SpringCloud 和 SpringCloud Data Flow三者定位的措辞非常有味道，同时也可以看出，Spring 官方对这三个技术非常重视，是现在以及今后学习的重点（SpringCloud 相关达人课课程届时也会上线）。
+- SpringCloud：Coordinate Anything，协调任何事情。
+- SpringCloud Data Flow：Connect everything，连接任何东西。
+
+        仔细品味一下，Spring 官网对 Spring Boot、SpringCloud 和 SpringCloud Data Flow三者定位的措辞非常有味道，同时也可以看出，Spring 官方对这三个技术非常重视，是现在以及今后学习的重点（SpringCloud 相关达人课课程届时也会上线）。
 
 ### 2.2 从Spring Boot框架特点来看
-可创建独立Spring应用程序、嵌入式Tomcat，Jetty容器、无需部署WAR包、简化Maven及Gradle配置、尽可能自动化配置Spring、直接植入产品环境下的实用功能，比如度量指标、健康检查及扩展配置、无需代码生成及XML配置等，同时Spring Boot不仅对web应用程序做了简化，还提供一系列的依赖包来把其它一些工作做成开箱即用，让大家更加专注于业务逻辑。同时博主趁着周末也为大家收集整理了 SpringBoot 的思维导图学习路线，文末获取电子版思维导图。
+        可创建独立Spring应用程序、嵌入式Tomcat，Jetty容器、无需部署WAR包、简化Maven及Gradle配置、尽可能自动化配置Spring、直接植入产品环境下的实用功能，比如度量指标、健康检查及扩展配置、无需代码生成及XML配置等，同时Spring Boot不仅对web应用程序做了简化，还提供一系列的依赖包来把其它一些工作做成开箱即用，让大家更加专注于业务逻辑。同时博主趁着周末也为大家收集整理了 SpringBoot 的思维导图学习路线，文末获取电子版思维导图。
+![](https://img-blog.csdnimg.cn/89fad486c2894944b4eac24e5aa18280.png)
 
 
 ### 2.3 从未来的发展趋势来看
-微服务是未来发展的趋势，项目会从传统架构慢慢转向微服务架构，因为微服务可以使不同的团队专注于更小范围的工作职责、使用独立的技术、更安全更频繁地部署。而 继承了 Spring 的优良特性，与 Spring 一脉相承，而且 支持各种REST API 的实现方式。Spring Boot 也是官方大力推荐的技术，可以看出，Spring Boot 是未来发展的一个大趋势。
+        微服务是未来发展的趋势，项目会从传统架构慢慢转向微服务架构，因为微服务可以使不同的团队专注于更小范围的工作职责、使用独立的技术、更安全更频繁地部署。而 继承了 Spring 的优良特性，与 Spring 一脉相承，而且 支持各种REST API 的实现方式。Spring Boot 也是官方大力推荐的技术，可以看出，Spring Boot 是未来发展的一个大趋势。
 
-并且从 Vaadin 最近发布的一份有关企业中 Java 现状的研究报告也表明了，Spring Boot 已经超越 Spring 成为最受欢迎的 Java 后端框架：
+        并且从 Vaadin 最近发布的一份有关企业中 Java 现状的研究报告也表明了，Spring Boot 已经超越 Spring 成为最受欢迎的 Java 后端框架：
 
 
-总而言之：既然市面上 Spring Boot 代表了企业的真实需求，那么，它就会表现在 Java 工程师、架构师的 求职面试技能清单上，Spring Boot 几乎是必备技能，所以，要成为合格的 Java 程序员，要学习 Spring 全家桶，Spring Boot 则是必经之路。
+        总而言之：既然市面上 Spring Boot 代表了企业的真实需求，那么，它就会表现在 Java 工程师、架构师的 求职面试技能清单上，Spring Boot 几乎是必备技能，所以，要成为合格的 Java 程序员，要学习 Spring 全家桶，Spring Boot 则是必经之路。
 
 ## 3. 专栏定位
-网络上关于Spring Boot杂而不精，很难系统化、全面地了解Spring Boot。如果想要对最新的技术要点进行系统的梳理、解读及应用， 一是根据官网的最新内容进行学习（需要精通英文且学习曲线比较陡峭），二就是阅读系统学习专栏或者其他相关资料。 于是乎，《滚雪球学Spring Boot》教程专栏横空出世啦。
+        网络上关于Spring Boot杂而不精，很难系统化、全面地了解Spring Boot。如果想要对最新的技术要点进行系统的梳理、解读及应用， 一是根据官网的最新内容进行学习（需要精通英文且学习曲线比较陡峭），二就是阅读系统学习专栏或者其他相关资料。 于是乎，[《滚雪球学Spring Boot》](https://blog.csdn.net/weixin_43970743/category_11599389.html)教程专栏横空出世啦。 
 
-为了写成此栏，bug菌是花费了近一年的巨量时间，以数年实际项目开发作为出发点，在其基础上再进行深度打磨、加强和完善， 并新增了 90% 以上的新内容，栏目发布后再核对修正，最后形成了本栏的大纲和学习体系。
+        为了写成此栏，bug菌是花费了近一年的巨量时间，以数年实际项目开发作为出发点，在其基础上再进行深度打磨、加强和完善， 并新增了 90% 以上的新内容，栏目发布后再核对修正，最后形成了本栏的大纲和学习体系。 
 
-本栏的内容规划是一个从零基础入门到进阶循序渐进的过程，即从 0 到 1。所以只要你是 Java 程序员就学习它，即使是没有任何 Spring Boot 使用经验的人，或者想系统学习 Spring Boot 技术的人，都推荐上手系统学习。
+        本栏的内容规划是一个从零基础入门到进阶循序渐进的过程，即从 0 到 1。所以只要你是 Java 程序员就学习它，即使是没有任何 Spring Boot 使用经验的人，或者想系统学习 Spring Boot 技术的人，都推荐上手系统学习。 
 
 ## 4. 专栏目标
-该专栏会一直不断更新迭代，致力打造全网最新最全最有价值最详细最透彻的Spring Boot 学习教程，让学习者能从入门到精通，欢迎大家持续关注。
+        该专栏会一直不断更新迭代，致力打造全网最新最全最有价值最详细最透彻的Spring Boot 学习教程，让学习者能从入门到精通，欢迎大家持续关注。
 
 ## 5. 本专栏能学到什么？
-本课程使用的是 Spring Boot 的 2.3.1 RELEASE 版本，课程文章均为作者在实际项目中剥离出来的场景和demo，目标是带领学习者快速上手 Spring Boot，将 Spring Boot 相关技术点快速运用在企业/微服务项目中。
+        本课程使用的是 Spring Boot 的 2.3.1 RELEASE 版本，课程文章均为作者在实际项目中剥离出来的场景和demo，目标是带领学习者快速上手 Spring Boot，将 Spring Boot 相关技术点快速运用在企业/微服务项目中。
 
 全栏教学会分为两个阶段：[【基础篇】](https://blog.csdn.net/weixin_43970743/category_11599389.html)与[【进阶篇】](https://blog.csdn.net/weixin_43970743/category_12296290.html)
 
-[【基础篇】](https://blog.csdn.net/weixin_43970743/category_11599389.html)主要介绍 SpringBoot 在项目中最常使用的一些功能点，旨在带领学习者快速掌握 Spring Boot 在开发时需要的知识点，能够把 Spring Boot 相关技术运用到实际项目架构中去。该部分以 Spring Boot 框架为主线，内容包括Json数据封装、日志记录、属性配置、MVC支持、在线文档、模板引擎、异常处理、AOP 处理、持久层集成、事务等等。
+        [【基础篇】](https://blog.csdn.net/weixin_43970743/category_11599389.html)主要介绍 SpringBoot 在项目中最常使用的一些功能点，旨在带领学习者快速掌握 Spring Boot 在开发时需要的知识点，能够把 Spring Boot 相关技术运用到实际项目架构中去。该部分以 Spring Boot 框架为主线，内容包括Json数据封装、日志记录、属性配置、MVC支持、在线文档、模板引擎、异常处理、AOP 处理、持久层集成、事务等等。
 
-[【进阶篇】](https://blog.csdn.net/weixin_43970743/category_12296290.html)主要是介绍 SpringBoot 在项目中拔高一些的技术点，包括集成的一些组件，旨在带领学习者在项目中遇到具体的场景时能够快速集成，完成对应的功能。该部分以 Spring Boot 框架为主线，内容包括拦截器、监听器、缓存、安全认证、分词插件、消息队列等等。
+        [【进阶篇】](https://blog.csdn.net/weixin_43970743/category_12296290.html)主要是介绍 SpringBoot 在项目中拔高一些的技术点，包括集成的一些组件，旨在带领学习者在项目中遇到具体的场景时能够快速集成，完成对应的功能。该部分以 Spring Boot 框架为主线，内容包括拦截器、监听器、缓存、安全认证、分词插件、消息队列等等。
 
-认真读完该系列文章之后，学习者会快速了解并掌握 Spring Boot 在项目中最常用的技术点，作者课程的最后，会基于课程内容搭建一个 Spring Boot 项目的空架构，该架构也是从实际项目中剥离出来，学习者可以运用该架构于实际项目中，具备使用 Spring Boot 进行实际项目开发的能力。
+        认真读完该系列文章之后，学习者会快速了解并掌握 Spring Boot 在项目中最常用的技术点，作者课程的最后，会基于课程内容搭建一个 Spring Boot 项目的空架构，该架构也是从实际项目中剥离出来，学习者可以运用该架构于实际项目中，具备使用 Spring Boot 进行实际项目开发的能力。
 
 ## 6. 适合阅读人群
-本专栏教程适合以下人群阅读：
+**本专栏教程适合以下人群阅读：**
 
-有一定的Java语言基础，了解Spring、Maven的在校学生或自学者。
+        有一定的Java语言基础，了解Spring、Maven的在校学生或自学者。
 有传统项目经验，想往微服务方向发展的工作人员。
 热衷于新技术并对 Spring Boot 感兴趣的人员，尤其是初学 Spring Boot 和需要从传统 Spring 转向 Spring Boot 开发的技术人员。
 希望了解 Spring Boot 2.x 的研究人员。
-所以，只要是 Java 程序员就适合，即使是没有任何 Spring Boot 使用经验的人，或者想系统学习 Spring Boot 技术的人，都推荐上手系统学习。
+        所以，只要是 Java 程序员就适合，即使是没有任何 Spring Boot 使用经验的人，或者想系统学习 Spring Boot 技术的人，都推荐上手系统学习。 
 
 ## 7. Spring Boot学习文章汇总
-为了便于同学快速定位文章学习，熬夜几天整理出了[【基础篇】](https://blog.csdn.net/weixin_43970743/category_11599389.html)专栏的文章及有效地址，同学们敬请吩咐bug菌吧，[【进阶篇】](https://blog.csdn.net/weixin_43970743/category_12296290.html)目前还在梳理中，请耐心等待。
+        为了便于同学快速定位文章学习，熬夜几天整理出了[【基础篇】](https://blog.csdn.net/weixin_43970743/category_11599389.html)专栏的文章及有效地址，同学们敬请吩咐"妲己"吧，[【进阶篇】](https://blog.csdn.net/weixin_43970743/category_12296290.html)进阶已梳理了50篇+，目前持续更新中，每周一到两篇新内容产出，欢迎同学们跟学。
 
 ### 7.1 Spring Boot【基础篇】
 ​[导读：SpringBoot 学习指南(附思维导图)](https://blog.csdn.net/weixin_43970743/article/details/130272237)
@@ -219,6 +223,7 @@ SpringCloud Data Flow：Connect everything，连接任何东西。
 
 ## 如何获取电子版思维导图？
 
-关注下方公号《猿圈奇妙屋》，获取最新BAT互联网公司面试题、4000G pdf电子书籍、简历模板等硬核资源，你想要的应有尽有。
+扫码关注下方微信方公号《猿圈奇妙屋》，获取最新BAT互联网公司面试题、4000G pdf电子书籍、简历模板等硬核资源，你想要的我都有，你确定还不来找我吗？
 
 ![](https://img-blog.csdnimg.cn/91d9b76b91aa462ea7326c3e9e67c77a.png)
+

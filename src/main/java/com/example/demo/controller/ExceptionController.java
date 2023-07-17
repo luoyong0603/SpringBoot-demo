@@ -24,7 +24,12 @@ import static com.example.demo.enums.ErrorCodeEnum.PARAM_EXIST_EXCEPTION;
 public class ExceptionController {
 
     @Autowired
-    private UserService userService;
+    private  UserService userService;
+
+    @Autowired
+    public void setUserService(UserService userService){
+        this.userService = userService;
+    }
 
     /**
      * 根据用户id查询用户信息

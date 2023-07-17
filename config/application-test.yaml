@@ -113,6 +113,13 @@ spring:
       min-idle: 0         #连接池中的最小空闲连接
       timeout: 1000      #连接超时时间（毫秒）。我设置的是1秒
 
+  data:
+    mongodb:
+      host: 127.0.0.1 #指定MongoDB服务地址
+      port: 27017 #指定端口，默认就为27017
+      database: test #指定使用的数据库(集合)
+
+
 #ElasticSearch配置
 #  data:
 #    elasticsearch:

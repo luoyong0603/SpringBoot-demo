@@ -73,7 +73,6 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-
         <!--Thymeleaf 静态模板-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -267,6 +266,11 @@
             <artifactId>flyway-core</artifactId>
         </dependency>
 
+        <!--集成mongodb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
 
     </dependencies>
 

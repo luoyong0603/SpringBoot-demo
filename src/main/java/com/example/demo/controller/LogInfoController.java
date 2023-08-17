@@ -25,7 +25,6 @@ public class LogInfoController {
     @Autowired
     private LogInfoService logInfoService;
 
-
     /**
      * 不分页查询所有日志
      */

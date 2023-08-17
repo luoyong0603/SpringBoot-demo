@@ -1,9 +1,26 @@
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: 123456
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        master:
+          driver-class-name: org.postgresql.Driver
+          url: jdbc:postgresql://localhost:5432/pg_test
+          username: postgres
+          password: 123456
+        slave_1:
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+          url: jdbc:mysql://127.0.0.1:3306/test_db2?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+          username: root
+          password: 123456
+
+  # influxDb连接配置
+  influx:
+    url: http://localhost:8086
+    user: admin
+    password:
+
 
   flyway:
     enabled: true # 开启 Flyway 功能
@@ -162,9 +179,18 @@ management:
 #  health:
 #    elasticsearch:
 #      enabled: false
+#自定义配置项
 luoyong:
   redis:
     login-time-out: 1800
+  #定时任务基础配置
+  scheduling:
+    # 定时器开关 true/false，无默认值
+    enabled: false
+    # 定时任务线程池大小，默认值5
+    pool-size: 5
+    # 定时任务线程等待时间，单位：秒，默认值60
+    await-termination: 60
 
 # 日志设置
 logging:

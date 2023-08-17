@@ -34,7 +34,6 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
-
     /**
      * 不分页查询db1所有用户信息
      */

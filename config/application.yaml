@@ -14,3 +14,4 @@ server:
 
 a: ${user.dir} #获取项目根目录
 b: ${user.home}
+

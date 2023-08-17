@@ -15,6 +15,12 @@ spring:
           username: root
           password: 123456
 
+  # influxDb连接配置
+  influx:
+    url: http://localhost:8086
+    user: admin
+    password:
+
   flyway:
     enabled: true # 开启 Flyway 功能
     cleanDisabled: true # 禁用 Flyway 所有的 drop 相关的逻辑，避免出现跑路的情况。
@@ -172,13 +178,25 @@ management:
 #  health:
 #    elasticsearch:
 #      enabled: false
+
+
+#自定义配置项
 luoyong:
   redis:
     login-time-out: 1800
+  #定时任务基础配置
+  scheduling:
+    # 定时器开关 true/false，无默认值
+    enabled: true
+    # 定时任务线程池大小，默认值5
+    pool-size: 5
+    # 定时任务线程等待时间，单位：秒，默认值60
+    await-termination: 60
 
 # 日志设置
 logging:
   level:
     # 持久层日志级别
     com.example.demo.dao: debug
+
 

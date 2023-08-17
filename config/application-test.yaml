@@ -16,13 +16,13 @@ spring:
           password: 123456
 
   # influxDb连接配置
-  influx:
-    url: http://localhost:8086
-    user: admin
-    password:
+#  influx:
+#    url: http://localhost:8086
+#    user: admin
+#    password:
 
   flyway:
-    enabled: true # 开启 Flyway 功能
+    enabled: false # 开启 Flyway 功能
     cleanDisabled: true # 禁用 Flyway 所有的 drop 相关的逻辑，避免出现跑路的情况。
     locations: # 迁移脚本目录
       classpath: db/migration # 配置 SQL-based 的 SQL 脚本在该目录下
@@ -187,7 +187,7 @@ luoyong:
   #定时任务基础配置
   scheduling:
     # 定时器开关 true/false，无默认值
-    enabled: true
+    enabled: false
     # 定时任务线程池大小，默认值5
     pool-size: 5
     # 定时任务线程等待时间，单位：秒，默认值60

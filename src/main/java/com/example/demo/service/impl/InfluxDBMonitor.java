@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
 @AllArgsConstructor
 @Slf4j
 public class InfluxDBMonitor {

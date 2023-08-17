@@ -107,7 +107,7 @@
 
 [Spring Boot入门(08)：整合Mybatis访问MySQL实现增删改查](https://blog.csdn.net/weixin_43970743/article/details/125888409)
 
-[Spring Boot入门(09)：使用MyBatis的XML配置方式访问MySQL实现增删改查](https://blog.csdn.net/weixin_43970743/article/details/125845236)
+[Spring Boot入门(09)：使用MyBatis的XML配置方式访问MySQL实现增删改查](https://blog.csdn.net/weixin_43970743/article/details/130204096)
 
 [Spring Boot入门(10)： mybatis之xml映射文件＞、＜=等特殊符号写法](https://blog.csdn.net/weixin_43970743/article/details/125886471)
 
@@ -183,7 +183,7 @@
 
 [Spring Boot进阶(13)：Spring Boot 如何获取@ApiModelProperty(value = “序列号“, name = “uuid“)中的value值name值？](https://luoyong.blog.csdn.net/article/details/127083749)
 
-[Spring Boot进阶(14)：Spring Boot 如何手动连接库并获取指定表结构？一文教会你](https://luoyong.blog.csdn.net/article/details/127488981)
+[Spring Boot进阶(14)：Spring Boot 如何手动连接库并获取指定表结构？一文教会你](https://luoyong.blog.csdn.net/article/details/126619912)
 
 [Spring Boot进阶(15)：根据数据库连接信息指定分页查询表结构信息](https://blog.csdn.net/weixin_43970743/article/details/126620228)
 

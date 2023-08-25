@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>当日天气预报</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <div th:each="weather : ${weathers}">
+        <p th:text="'地区:'+ ${weather.city}"></p>
+        <p th:text="'更新时间:'+${weather.time}"></p>
+        <p th:text="'温度:'+${weather.wendu}"></p>
+        <p th:text="'湿度:'+${weather.shidu}"></p>
+        <p th:text="'空气质量:'+${weather.quality}"></p>
+        <p th:text="'最高温度:'+${weather.high}"></p>
+        <p th:text="'最低温度:'+${weather.low}"></p>
+        <p th:text="'日出时间:'+${weather.sunrise}"></p>
+        <p th:text="'日落时间:'+${weather.sunset}"></p>
+        <p th:text="'空气指数:'+${weather.aqi}"></p>
+        <p th:text="'风向:'+${weather.fx}"></p>
+        <p th:text="'风速:'+${weather.fl}"></p>
+        <p th:text="'天气:'+${weather.type}"></p>
+        <p th:text="'温馨提醒:'+${weather.notice}"></p>
+    </div>
+</body>
+</html>

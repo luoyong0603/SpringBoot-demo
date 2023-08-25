@@ -21,13 +21,13 @@ import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 @ConditionalOnProperty(prefix = "luoyong.scheduling", name = "enabled", havingValue = "true")
 public class SchedulingConfig implements SchedulingConfigurer {
 
-	@Value("${luoyong.scheduling.pool-size:10}")
+	@Value("${luoyong.scheduling.pool-size:5}")
 	private Integer poolSIze;
 
 	@Value("${luoyong.scheduling.await-termination:60}")
 	private Integer awaitTermination;
 
-	@Value("${luoyong.application.name:xm-system}")
+	@Value("${luoyong.application.name:springboot}")
 	private String applicationName;
 
 	/**

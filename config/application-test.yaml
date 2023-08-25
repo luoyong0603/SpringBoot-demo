@@ -15,6 +15,11 @@ spring:
           username: root
           password: 123456
 
+  # memcached配置
+#  memcached:
+#    servers: localhost:11211
+#    expiration: 3600
+
   # influxDb连接配置
 #  influx:
 #    url: http://localhost:8086
@@ -106,6 +111,7 @@ spring:
 
 
   #redis配置
+Spring:
   redis:
     database: 0    #Redis数据库索引（默认为0）
     host: 127.0.0.1  #redis服务器ip，由于我是搭建在本地，固指向本地ip
@@ -187,7 +193,7 @@ luoyong:
   #定时任务基础配置
   scheduling:
     # 定时器开关 true/false，无默认值
-    enabled: false
+    enabled: true
     # 定时任务线程池大小，默认值5
     pool-size: 5
     # 定时任务线程等待时间，单位：秒，默认值60

@@ -523,7 +523,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
     /**
      * 新增用户
      */
-    @CachePut(value = "user1",key = "#user.id")
+    @CachePut(value = "user",key = "#user.id")
     @Override
     public UserEntity saveUser(UserEntity user) {
         this.save(user);

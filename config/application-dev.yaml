@@ -1,9 +1,18 @@
 spring:
+  quartz:
+    job-store-type: jdbc  #指定Quartz的存储方式
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
     password: 123456
+
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: 123456
 
   flyway:
     enabled: true # 开启 Flyway 功能

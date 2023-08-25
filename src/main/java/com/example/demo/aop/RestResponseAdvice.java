@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
  * 返回结果包装统一返回格式通过切面自动注入。
  */
 @Slf4j
-@RestControllerAdvice
+//@RestControllerAdvice
 public class RestResponseAdvice implements ResponseBodyAdvice<Object> {
 
     @Override

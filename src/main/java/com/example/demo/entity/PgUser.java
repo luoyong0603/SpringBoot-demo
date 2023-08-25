@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 
 /**
+ * 用于postgresql 数据库使用的
+ *
  * @author luoYong
  * @version 1.0
  * @date 2023/8/7 17:32

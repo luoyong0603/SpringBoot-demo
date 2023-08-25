@@ -9,7 +9,7 @@ public class CountDownLatchTask {
 
     //创建一个最大线程数100的线程池
     private static ExecutorService es =
-            new ThreadPoolExecutor(4, 100, 0L, TimeUnit.MILLISECONDS,
+            new ThreadPoolExecutor(1, 100, 0L, TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<Runnable>(100));
 
     public static void main(String[] args) throws Exception {
@@ -18,11 +18,11 @@ public class CountDownLatchTask {
         CountDownLatch taskLatch = new CountDownLatch(10);
         for (int i = 0; i < 10; i++) {
             es.execute(() -> { //提交执行
-                taskLatch.countDown();
-                System.out.println("当前计数器值为：" + taskLatch.getCount());
                 try {
                     //模拟线程执行方法，执行1s
                     Thread.sleep(1000);
+                    taskLatch.countDown();
+                    System.out.println("当前计数器值为：" + taskLatch.getCount());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

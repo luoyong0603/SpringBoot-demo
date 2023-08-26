@@ -16,6 +16,12 @@ public interface PeopleRepository extends ElasticsearchRepository<People, String
 
     //Optional<Book> findById(String id);
 
+    /**
+     * 根据name查询
+     * @param name
+     * @param pageable
+     * @return
+     */
     Page<People> findByName(String name, Pageable  pageable);
 
 }

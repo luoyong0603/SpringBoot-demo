@@ -13,7 +13,7 @@ import org.springframework.web.servlet.function.RequestPredicates;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.RouterFunctions;
 import org.springframework.web.servlet.function.ServerResponse;
-
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 
 @EnableAsync //开启异步支持
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})

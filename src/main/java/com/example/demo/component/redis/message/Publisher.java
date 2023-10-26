@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 /**
  * redis:消息生产者
  */
-@Service
+//@Service
 public class Publisher {
 
     @Autowired

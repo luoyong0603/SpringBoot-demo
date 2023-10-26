@@ -17,16 +17,19 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 /**
  * redis配置类
  */
-@Configuration
+//@Configuration
+/*
 @ConditionalOnClass(RedisOperations.class)
 @EnableConfigurationProperties(RedisProperties.class)
 public class RedisConfig {
 
-    /**
+    */
+/**
      * 字符串Template
      *
      * @param connection redis连接
-     */
+     *//*
+
     @Bean
     @ConditionalOnMissingBean(StringRedisTemplate.class)
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory connection) {
@@ -35,9 +38,11 @@ public class RedisConfig {
         return template;
     }
 
-    /**
+    */
+/**
      * 配置监听器
-     */
+     *//*
+
     @Bean
     public RedisMessageListenerContainer container(RedisConnectionFactory factory,
                                                    Receiver listener) {
@@ -54,12 +59,15 @@ public class RedisConfig {
         return container;
     }
 
-    /**
+    */
+/**
      * 订阅匹配的多个频道
-     */
+     *//*
+
     @Bean
     public PatternTopic patternTopic() {
         return new PatternTopic("bug_*");
     }
 
-}
+
+}*/

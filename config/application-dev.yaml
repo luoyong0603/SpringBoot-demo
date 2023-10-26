@@ -1,12 +1,16 @@
 spring:
-  quartz:
-    job-store-type: jdbc  #指定Quartz的存储方式
+#  quartz:
+#    job-store-type: jdbc  #指定Quartz的存储方式
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
 
+
+  http:
+    converters:
+      preferred-json-mapper: fastjson
 #spring:
 #  datasource:
 #    driver-class-name: org.postgresql.Driver

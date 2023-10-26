@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.example.demo.annotation.SysLog;
 import com.example.demo.entity.UserEntity;
 import com.example.demo.enums.ErrorCodeEnum;
@@ -13,6 +14,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,6 +35,38 @@ public class UserController {
     private UserService userService;
     @Autowired
     private UserMapper userMapper;
+
+
+
+
+    public static void main(String[] args) throws Exception {
+        RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
+        String responseBody = restTemplateBuilder.build()
+                .getForObject("https://www.baidu.com/", String.class);
+        System.out.println(responseBody);
+    }
+
+
+    /**
+     * 演示fastJson
+     */
+/*    @GetMapping("/{id}")
+    @ApiOperation(value = "演示fastJson之序列化", notes = "演示fastJson之序列化")
+    public UserEntity getUser(@PathVariable("id") Long id) {
+        UserEntity user = new UserEntity();
+        user.setId(1);
+        user.setName("bug菌");
+        user.setSex("男");
+        user.setAge(20);
+        user.setDescribes("这是示例数据。");
+        return user;
+    }*/
+
+    @PostMapping("/user")
+    @ApiOperation(value = "演示fastJson之反序列化", notes = "演示fastJson之反序列化")
+    public UserEntity createUser(@RequestBody String json) {
+        return JSON.parseObject(json, UserEntity.class);
+    }
 
     /**
      * 不分页查询db1所有用户信息

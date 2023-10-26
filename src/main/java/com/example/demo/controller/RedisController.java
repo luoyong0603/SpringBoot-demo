@@ -19,18 +19,18 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "redis相关控制器", description = "redis相关控制器")
 public class RedisController {
 
-    @Autowired
-    private Publisher publisher;
+//    @Autowired
+//    private Publisher publisher;
 
-    /**
-     * 模拟发布消息
-     */
-    @GetMapping("/publish")
-    public String publish(@ApiParam("通道名") @RequestParam String channel,
-                          @ApiParam("消息体") @RequestParam String message) {
-        // 发送消息
-        return publisher.sendMessage(channel, message);
-    }
+//    /**
+//     * 模拟发布消息
+//     */
+//    @GetMapping("/publish")
+//    public String publish(@ApiParam("通道名") @RequestParam String channel,
+//                          @ApiParam("消息体") @RequestParam String message) {
+//        // 发送消息
+//        return publisher.sendMessage(channel, message);
+//    }
 
 
 }

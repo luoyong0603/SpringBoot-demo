@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * 延时队列类
  */
-@Component
+//@Component
 public class DelayQueue {
 
     private static final String KEY = "delay_queue";

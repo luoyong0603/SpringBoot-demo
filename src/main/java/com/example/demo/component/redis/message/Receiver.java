@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * redis:接收消息者
  */
-@Component
+//@Component
 public class Receiver implements MessageListener {
     private static Logger logger = LoggerFactory.getLogger(Receiver.class);
 

@@ -13,10 +13,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 /**
- * swagger配置
+ * swagger配置Knife4j
  *
- * @Author luoyong
- * @Date 2021-06-01 13:00
+ * @Author bug菌
+ * @Date 2023-06-01 13:00
  */
 @Configuration //必须存在
 @EnableSwagger2 //必须存在
@@ -34,11 +34,11 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("swagger 接口文档")
-                .contact(new Contact("luoyong", "", ""))
+                .title("knife4j在线接口文档")
+                .contact(new Contact("bug菌", "", ""))
                 .description("swagger-bootstrap-ui")
                 .termsOfServiceUrl("http://localhost:8080/")
-                .version("1.0")
+                .version("v1.0")
                 .build();
     }
 }

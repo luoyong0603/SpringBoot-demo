@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.mysql.cj.result.IntegerValueFactory;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +16,7 @@ class CompareTest {
     @Test
     void test1() {
 //        String [] str = new String[5];
-        String [] str = {"1","5","2","0","3"};
+        String[] str = {"1", "5", "2", "0", "3"};
         Arrays.sort(str, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -26,7 +25,7 @@ class CompareTest {
 //                return Integer.valueOf(o2) - Integer.valueOf(o1);//顺序
             }
         });
-        for (String  s: str) {
+        for (String s : str) {
             System.out.print(s);
         }
     }

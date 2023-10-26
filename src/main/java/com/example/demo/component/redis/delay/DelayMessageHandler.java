@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 消息处理器（）
  */
-@Component
+//@Component
 public class DelayMessageHandler {
 
     @Autowired

@@ -15,9 +15,9 @@ import java.io.IOException;
  * @author luoYong
  * @version 1.0
  * @date 2022/11/21 16:05
- */
-@RunWith(SpringRunner.class)
+ */@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 public class JacksonTest {
 
     /**
